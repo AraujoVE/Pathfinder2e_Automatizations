@@ -1,0 +1,17 @@
+Main Item Many:
+"//span//h1[@class='title']/following-sibling::b[contains(.,'" + AttrName + "') and  not(./preceding-sibling::h2[@class='title'])]"
+Main Item Once:
+"//span//h1[@class='title']/following-sibling::b[contains(.,'" + AttrName + "')]"
+
+
+
+
+Sub Items:
+"//span//h2[@class='title'][" + pos + "]/following-sibling::b[contains(.,'" + AttrName + "')][last() - " + alreadyFound + "]"
+
+Onde pos é a posição do item e alreadyFound é quantos itens já foram encontrados
+Deve se começar do último e a alreadyFound começa em 0. Quando o retorno não é nulo, alreadyFound é incrementado.
+
+
+
+
